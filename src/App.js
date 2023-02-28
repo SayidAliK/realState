@@ -2,6 +2,7 @@ import './App.css';
 import {
   BrowserRouter as Router, Routes,
   Route,
+  Outlet,
 } from "react-router-dom";
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
@@ -9,11 +10,14 @@ import SignUp from './pages/SignUp';
 import ForgotPassword from './pages/ForgotPassword';
 import Offers from './pages/Offers';
 import Profile from './pages/Profile';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
         <Router>
+          <Header/>
+          <Outlet/>
           <Routes>
 
           <Route path='/' element= {<Home />} />
